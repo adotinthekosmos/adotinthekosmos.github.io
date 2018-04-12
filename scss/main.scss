@@ -1,0 +1,879 @@
+@import 'animation';
+body,
+html {
+    font-family: 'Raleway', sans-serif;
+    overflow-x: hidden;
+    background-color: #323a44;
+    color: white;
+}
+
+.contact-btn {
+    position: fixed;
+    top: 0;
+    right: 0;
+    margin: 1.5em;
+    padding: 0;
+    height: 50px;
+    width: 150px;
+    border-radius: 25px;
+    z-index: 100;
+    background: #DA4453;
+    /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #89216B, #DA4453);
+    /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #89216B, #DA4453);
+    /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    opacity: 1;
+    border: none;
+    color: white;
+    font-size: 1.1em;
+    z-index: 10;
+    a {
+        text-decoration: none;
+        color: white;
+        padding: 10px 0px 10px 0px;
+    }
+    &:hover {
+        background: #DA4453;
+        transition: all 0.3s ease;
+        cursor: pointer;
+    }
+    &:focus {
+        outline: none;
+    }
+}
+
+//start welcome section
+#welcome-section {
+    width: 100%;
+    min-height: 768px;
+    position: relative;
+    z-index: 0;
+    overflow: hidden;
+    #video {
+        min-width: 100%;
+        min-height: 900px;
+    }
+    .overlay {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.4);
+    }
+    #logo {
+        font-size: 5em;
+        padding: 0.3em;
+        color: white;
+    }
+    #welcome-content {
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        top: 0;
+        .slogan {
+            font-weight: 300;
+            font-size: 3em;
+        }
+        .portfolio-btn-wrapper {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 10em;
+        }
+        .my-portfolio-btn {
+            margin: auto;
+            background: transparent;
+            padding: 0;
+            width: 100px;
+            height: 50px;
+            border: 1px solid white;
+            transition: all 0.3s linear;
+            a {
+                display: block;
+                color: white;
+                width: 100px;
+                height: 50px;
+                line-height: 50px;
+                transition: color 0.3s linear;
+                &:hover {
+                    text-decoration: none;
+                    color: #81c784;
+                }
+            }
+            &:hover {
+                border-color: #81c784;
+                color: #81c784;
+                cursor: pointer;
+            }
+            &:focus {
+                outline: none;
+            }
+        }
+    }
+    .cd-words-wrapper {
+        b {
+            font-family: 'Fredericka the Great', cursive;
+        }
+    }
+    //start social btn
+    .social-wrap {
+        min-height: 150px;
+        margin-top: 6em;
+        .social {
+            height: 3em;
+            width: 13.5em;
+            margin: auto;
+            li {
+                display: block;
+                height: 4em;
+                line-height: 4em;
+                margin: -2.2em;
+                position: absolute;
+                -webkit-transition: -webkit-transform .7s;
+                -moz-transition: -moz-transform .7s;
+                -ms-transition: -ms-transform .7s;
+                -o-transition: -o-transform .7s;
+                transition: transform .7s;
+                -webkit-transform: rotate(45deg);
+                -moz-transform: rotate(45deg);
+                -ms-transform: rotate(45deg);
+                -o-transform: rotate(45deg);
+                transform: rotate(45deg);
+                text-align: center;
+                width: 4em;
+                &:hover {
+                    -webkit-transform: scale(1.3, 1.3) rotate(45deg);
+                    -moz-transform: scale(1.3, 1.3) rotate(45deg);
+                    -ms-transform: scale(1.3, 1.3) rotate(45deg);
+                    -o-transform: scale(1.3, 1.3) rotate(45deg);
+                    transform: scale(1.3, 1.3) rotate(45deg);
+                }
+            }
+            a {
+                color: #fffdf0;
+                display: block;
+                height: 4em;
+                line-height: 4em;
+                text-align: center;
+                -webkit-transform: rotate(-45deg);
+                -moz-transform: rotate(-45deg);
+                -ms-transform: rotate(-45deg);
+                -o-transform: rotate(-45deg);
+                transform: rotate(-45deg);
+                width: 4em;
+                &:hover {
+                    text-decoration: none;
+                }
+            }
+            .facebook {
+                background: #155b9d;
+                left: 0;
+                top: 0%;
+            }
+            .github {
+                background: #1a9ec4;
+                bottom: 0;
+                left: 25%;
+            }
+            .medium {
+                background: #d05f8f;
+                left: 50%;
+                top: 0%;
+            }
+            .google-plus {
+                background: #3f7aa3;
+                bottom: 0;
+                left: 75%;
+            }
+            .linked-in {
+                background: #157f9d;
+                left: 100%;
+                top: 0%;
+            }
+        }
+    }
+    //end social btn
+    //start mouse scroll indicator
+    .scroll-btn {
+        display: flex;
+        text-align: center;
+        align-items: center;
+        justify-content: center;
+        margin-top: 50px;
+        &>* {
+            display: inline-block;
+            line-height: 18px;
+            font-size: 0.9em;
+            font-weight: normal;
+            color: #7f8c8d;
+            color: #ffffff;
+            font-family: "proxima-nova", "Helvetica Neue", Helvetica, Arial, sans-serif;
+            letter-spacing: 2px;
+        }
+        &>*:hover,
+         :focus,
+        .active {
+            color: #ffffff;
+        }
+        &>*:hover,
+         :focus,
+         :active,
+        .active {
+            opacity: 0.8;
+            filter: alpha(opacity=80);
+        }
+        .mouse {
+            position: relative;
+            display: block;
+            width: 35px;
+            height: 55px;
+            margin: 0 auto 20px;
+            -webkit-box-sizing: border-box;
+            -moz-box-sizing: border-box;
+            box-sizing: border-box;
+            border: 3px solid white;
+            border-radius: 23px;
+            &>* {
+                position: absolute;
+                display: block;
+                top: 29%;
+                left: 50%;
+                width: 8px;
+                height: 8px;
+                margin: -4px 0 0 -4px;
+                background: white;
+                border-radius: 50%;
+                -webkit-animation: ani-mouse 2s linear infinite;
+                -moz-animation: ani-mouse 2s linear infinite;
+                animation: ani-mouse 2s linear infinite;
+            }
+        }
+    }
+    //end mouse scroll indicator
+}
+
+//end welcome section
+//start about section
+#about-section {
+    width: 100%;
+    min-height: 890px;
+    padding-bottom: 20px;
+    .about-content {
+        width: 100%;
+        height: 100%;
+        margin-top: 5%;
+        h1 {
+            padding-top: 5%;
+            font-size: 6rem;
+            text-align: center;
+            font-weight: 100;
+        }
+        p {
+            font-size: 1.6rem;
+            line-height: 1.8;
+            padding: 40px 80px 0 80px;
+            color: #94a1aa;
+            margin-bottom: 5%;
+            text-align: center;
+        }
+    }
+    //start progress pie
+    .chart-container {
+        margin-top: 100px;
+        margin-bottom: 100px;
+    }
+    .pie-container {
+        margin-top: 20px;
+    }
+    .progress-container {
+        padding-left: 10%;
+        padding-right: 10%;
+        margin-bottom: 2%;
+        .progress-title {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        //start .progress
+        .progress {
+            width: 150px;
+            height: 150px;
+            line-height: 150px;
+            background: none;
+            margin: 0 auto;
+            box-shadow: none;
+            position: relative;
+            &:after {
+                content: "";
+                width: 100%;
+                height: 100%;
+                border-radius: 50%;
+                border: 2px solid #fff;
+                position: absolute;
+                top: 0;
+                left: 0;
+            }
+            &>span {
+                width: 50%;
+                height: 100%;
+                overflow: hidden;
+                position: absolute;
+                top: 0;
+                z-index: 1;
+            }
+            .progress-left {
+                left: 0;
+                .progress-bar {
+                    left: 100%;
+                    border-top-right-radius: 80px;
+                    border-bottom-right-radius: 80px;
+                    border-left: 0;
+                    -webkit-transform-origin: center left;
+                    transform-origin: center left;
+                }
+            }
+            .progress-right {
+                right: 0;
+                .progress-bar {
+                    left: -100%;
+                    border-top-left-radius: 80px;
+                    border-bottom-left-radius: 80px;
+                    border-right: 0;
+                    -webkit-transform-origin: center right;
+                    transform-origin: center right;
+                }
+            }
+            .progress-bar {
+                width: 100%;
+                height: 100%;
+                background: none;
+                border-width: 2px;
+                border-style: solid;
+                position: absolute;
+                top: 0;
+            }
+            .progress-value {
+                width: 85%;
+                height: 85%;
+                border-radius: 50%;
+                border: 2px solid #ebebeb;
+                font-size: 32px;
+                line-height: 125px;
+                text-align: center;
+                position: absolute;
+                top: 7.5%;
+                left: 7.5%;
+            }
+        }
+        //end .progress
+        //jQuery animation
+        .right-progress-animated {
+            animation: loading-1 1.5s linear forwards;
+        }
+        .html-animated {
+            animation: loading-2 1.5s linear forwards 1.5s;
+        }
+        .attitude-animated {
+            animation: loading-3 1.5s linear forwards 1.5s;
+        }
+        .css-animated {
+            animation: loading-4 1.5s linear forwards 1.5s;
+        }
+        .javascript-animated {
+            animation: loading-5 1.5s linear forwards 1.5s;
+        }
+        //pie color
+        .progress.green .progress-bar {
+            border-color: #1abc9c;
+        }
+        .progress.green .progress-value {
+            color: #1abc9c;
+        }
+        .progress.blue .progress-bar {
+            border-color: #049dff;
+        }
+        .progress.blue .progress-value {
+            color: #049dff;
+        }
+        .progress.yellow .progress-bar {
+            border-color: #fdba04;
+        }
+        .progress.yellow .progress-value {
+            color: #fdba04;
+        }
+        .progress.pink .progress-bar {
+            border-color: #ef5350;
+        }
+        .progress.pink .progress-value {
+            color: #ef5350;
+        }
+    }
+    //end progress pie
+}
+
+//end about section
+//start bigAssImg section 
+#bigAssImg {
+    width: 100%;
+    height: 400px;
+    background-image: url("../images/img1.jpg");
+    background-position: center;
+    background-attachment: fixed;
+    background-size: cover;
+}
+
+//end bigAssImg section
+//start timeline section
+
+/* Media Queries */
+
+@mixin mq-xs {
+    @media (min-width: 320px) {
+        @content;
+    }
+}
+
+@mixin mq-sm {
+    @media (min-width: 480px) {
+        @content;
+    }
+}
+
+@mixin mq-md {
+    @media (min-width: 720px) {
+        @content;
+    }
+}
+
+@mixin mq-lg {
+    @media (min-width: 1000px) {
+        @content;
+    }
+}
+
+$background:#323a44;
+$box-shadow: 0px 1px 22px 4px rgba(0,
+0,
+0,
+0.07);
+$border: 1px solid rgba(191,
+191,
+191,
+0.4);
+$items: 2;
+$rows: ceil($items/2);
+
+/* Card sizing */
+
+$card-height: 400px;
+$card-width: 450px;
+$inner-margin: 15px;
+$number-size: 35px;
+$stagger: 180px;
+$outer-margin: 90px;
+$marker-size: 9px;
+
+/* Colors */
+
+$steps: #46b8e9;
+$colors: #ef5350,
+#ab47bc,
+#c0ca33,
+#26a69a;
+$timeline: #bdbdbd;
+
+/* Calculations */
+
+$container-height: $rows * ($card-height+$outer-margin)+$stagger;
+$container-width: $card-width*2+$outer-margin*3;
+$head-height: $number-size+50;
+$body-height: $card-height - $head-height;
+$marker-dist: $card-width+$outer-margin/2 - $marker-size/2;
+
+/* Placeholders */
+
+@include mq-lg {
+    %arrow {
+        position: absolute;
+        content: "";
+        width: 0;
+        height: 0;
+        border-top: 15px solid transparent;
+        border-bottom: 15px solid transparent;
+    }
+    %marker {
+        position: absolute;
+        content: "";
+        width: $marker-size;
+        height: $marker-size;
+        background-color: $timeline;
+        border-radius: $marker-size;
+        box-shadow: 0px 0px 2px 8px $background;
+    }
+}
+
+
+/* Some Cool Stuff */
+
+$counter: $items - $rows+2;
+@for $i from 1 through $rows {
+    .demo-card:nth-child(#{$i*2-1}) {
+        order: $i
+    }
+    .demo-card:nth-child(#{$i*2}) {
+        order: $counter
+    }
+    $counter: $counter+1;
+}
+
+
+/* Border Box */
+
+* {
+    box-sizing: border-box;
+}
+
+
+/* Fonts */
+
+#timeline {
+    width: 100%;
+    min-height: 983px;
+    background: $background;
+    padding-top: 100px;
+    h1 {
+        text-align: center;
+        font-size: 5rem;
+        font-weight: 200;
+        margin-bottom: 50px;
+    }
+    p.leader {
+        text-align: center;
+        max-width: 90%;
+        margin: auto;
+        margin-bottom: 45px;
+    }
+    .demo-card-wrapper {
+        position: relative;
+        margin: auto;
+        @include mq-lg {
+            display: flex;
+            flex-flow: column wrap;
+            width: $container-width;
+            height: $container-height;
+            margin: 0 auto;
+        }
+        &::after {
+            z-index: 1;
+            content: "";
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            left: 50%;
+            border-left: $border;
+            @include mq-lg {
+                border-left: 1px solid $timeline;
+            }
+        }
+    }
+    .demo-card {
+        position: relative;
+        display: block;
+        margin: 10px auto 80px;
+        max-width: 94%;
+        z-index: 2;
+        @include mq-sm {
+            max-width: 60%;
+            box-shadow: $box-shadow;
+        }
+        @include mq-md {
+            max-width: 40%;
+        }
+        @include mq-lg {
+            max-width: $card-width;
+            height: $card-height;
+            margin: $outer-margin;
+            margin-top: $outer-margin/2;
+            margin-bottom: $outer-margin/2;
+            &:nth-child(odd) {
+                margin-right: $outer-margin/2;
+                .head::after {
+                    @extend %arrow;
+                    border-left-width: 15px;
+                    border-left-style: solid;
+                    left: 100%;
+                }
+                .head::before {
+                    @extend %marker;
+                    left: $marker-dist + 1;
+                }
+            }
+            &:nth-child(even) {
+                margin-left: $outer-margin/2;
+                .head::after {
+                    @extend %arrow;
+                    border-right-width: 15px;
+                    border-right-style: solid;
+                    right: 100%;
+                }
+                .head::before {
+                    @extend %marker;
+                    right: $marker-dist - 1;
+                }
+            }
+            &:nth-child(2) {
+                margin-top: $stagger;
+            }
+        }
+        .head {
+            position: relative;
+            display: flex;
+            align-items: center;
+            color: #fff;
+            font-weight: 400;
+            .number-box {
+                display: inline;
+                float: left;
+                margin: $inner-margin;
+                padding: 10px;
+                font-size: $number-size;
+                line-height: $number-size;
+                font-weight: 600;
+                background: rgba(0, 0, 0, 0.17);
+            }
+            h2 {
+                text-transform: uppercase;
+                font-size: 1.3rem;
+                font-weight: inherit;
+                letter-spacing: 2px;
+                margin: 0;
+                padding-bottom: 6px;
+                line-height: 1rem;
+                @include mq-sm {
+                    font-size: 165%;
+                    line-height: 2.2rem;
+                }
+                span {
+                    display: block;
+                    font-size: 1rem;
+                    margin: 0;
+                    @include mq-sm {
+                        font-size: 1.3rem;
+                    }
+                }
+            }
+        }
+        .body {
+            padding: $inner-margin;
+            @include mq-lg {
+                height: $body-height;
+            }
+            p {
+                font-size: 14px;
+                line-height: 18px;
+                margin-bottom: $inner-margin;
+            }
+            img {
+                display: block;
+                width: 100%;
+            }
+        }
+        @for $i from 1 through $items {
+            &--step#{$i} {
+                $color: nth($colors, ((($i - 1) % 4) + 1));
+                background-color: $color;
+                .head::after {
+                    border-color: $color;
+                }
+            }
+        }
+    }
+}
+
+//end timeline section
+//start portfolio section
+#portfolio-section {
+    width: 100%;
+    background: $background;
+    padding: 50px;
+    overflow-y: hidden;
+    h1 {
+        text-align: center;
+        font-size: 5rem;
+        font-weight: 200;
+        margin-bottom: 50px;
+    }
+    .row {
+        overflow-y: hidden;
+    }
+    .col-md-4 {
+        margin-bottom: 20px;
+    }
+}
+
+.hidden {
+    display: none;
+}
+
+.imglist {
+    img {
+        width: 100%;
+        min-height: 425px;
+        overflow: hidden;
+        transition: all 0.2s ease;
+        &:hover {
+            filter: blur(5px);
+        }
+    }
+}
+
+@media screen and (min-device-width: 320px) and (max-device-width: 480px) {
+    .imglist {
+        img {
+            width: 100%;
+            min-height: auto !important;
+        }
+    }
+}
+
+//end portfolio section
+//start extra greeting
+#extraGreeting {
+    width: 100%;
+    min-height: 600px;
+    background-image: url("../images/img2.jpg");
+    background-position: initial;
+    background-attachment: fixed;
+    background-size: cover;
+    padding: 10em;
+    h1 {
+        font-size: 3.5em;
+        font-weight: 100;
+        text-align: center;
+    }
+}
+
+@media screen and (min-device-width: 320px) and (max-device-width: 480px) {
+    #extraGreeting {
+        width: 100%;
+        min-height: 200px;
+        background-image: url("../images/img2.jpg");
+        background-position: center;
+        background-attachment: fixed;
+        background-size: cover;
+        padding: 2em;
+        h1 {
+            font-size: 2em;
+            font-weight: 100;
+            text-align: center;
+        }
+    }
+}
+
+//end extra greeting
+//start contact section
+#contact-section {
+    width: 100%;
+    min-height: 983px;
+    background: $background;
+    .form-wrapper {
+        padding: 4em;
+        padding-top: 10em;
+        .contact-title {
+            h1 {
+                font-size: 3.5em;
+                font-weight: 100;
+                margin-bottom: 0.2em;
+            }
+            p {
+                font-family: "Open Sans", "Helvetica Neue", "Lucida Grande", Arial, Verdana, sans-serif;
+                color: #939da5;
+                font-size: 1em;
+                line-height: 1.8;
+                strong {
+                    font-weight: bold;
+                }
+                a {
+                    color: white;
+                    text-decoration: none;
+                    font-weight: bold;
+                    transition: color 0.5s ease;
+                    &:hover {
+                        color: #00c8aa;
+                    }
+                }
+            }
+        }
+        .contact-form {
+            padding-top: 1.2em;
+            input,
+            textarea {
+                border: none;
+                background-color: #2e343f;
+                padding: 15px 20px 15px 20px;
+                margin-top: 1.2em;
+                font-size: 1em;
+                transition: all 0.3s ease;
+                &::placeholder {
+                    color: #939da5;
+                }
+                &:focus {
+                    outline: none !important;
+                    color: white;
+                }
+                &:hover {
+                    background-color: #2a3039;
+                }
+            }
+        }
+        .textarea {
+            width: 100%;
+        }
+        button {
+            padding: 0;
+            margin: 0;
+            margin-top: 2em;
+            width: 150px;
+            height: 50px;
+            border-radius: 25px;
+            a {
+                display: block;
+                color: white;
+                text-decoration: none;
+                font-size: 1.4em;
+                line-height: 50px;
+                width: 100%;
+                height: 100%;
+            }
+        }
+    }
+}
+
+.form-control {
+    color: white;
+    font-size: 1.4em;
+}
+
+#map {
+    width: 100%;
+    min-height: 983px;
+    background-color: #323a44;
+}
+
+.footer {
+    position: absolute;
+    bottom: 0.6em;
+    font-family: "Open Sans", "Helvetica Neue", "Lucida Grande", Arial, Verdana, sans-serif;
+    a {
+        color: white;
+        text-decoration: none;
+        font-weight: bold;
+        transition: color 0.5s ease;
+        &:hover {
+            color: #00c8aa;
+        }
+    }
+}
+
+//end contact section
