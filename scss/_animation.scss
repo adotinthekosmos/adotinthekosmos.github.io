@@ -128,3 +128,14 @@
         transform: rotate(360deg);
     }
 }
+
+@keyframes leftToRight {
+    from {
+        left: -100px;
+        opacity: 0;
+    }
+    to {
+        left: 0px;
+        opacity: 1;
+    }
+}

@@ -85,12 +85,52 @@
     -webkit-transform: rotate(360deg);
     -o-transform: rotate(360deg);
     transform: rotate(360deg); } }
+@keyframes leftToRight {
+  from {
+    left: -100px;
+    opacity: 0; }
+  to {
+    left: 0px;
+    opacity: 1; } }
 body,
 html {
   font-family: 'Raleway', sans-serif;
   overflow-x: hidden;
   background-color: #323a44;
   color: white; }
+
+#loader-section {
+  position: relative;
+  z-index: 0;
+  width: 100%;
+  min-height: 768px; }
+  #loader-section .loader-background {
+    position: absolute;
+    z-index: 1;
+    width: 100%;
+    min-height: 768px;
+    background: url("../images/loader-img.jpg");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    filter: blur(10px); }
+  #loader-section .loader {
+    position: absolute;
+    z-index: 2;
+    top: 40%;
+    left: 50%;
+    margin-left: -75px;
+    width: 150px;
+    height: 150px;
+    border: 20px solid white;
+    border-top: 20px solid #323a44;
+    border-radius: 50%;
+    animation: rotating 2s linear infinite; }
+
+.left-to-right {
+  position: relative;
+  animation-name: leftToRight;
+  animation-duration: 1s; }
 
 .contact-btn {
   position: fixed;
@@ -420,7 +460,7 @@ html {
 
 #bigAssImg {
   width: 100%;
-  height: 400px;
+  min-height: 400px;
   background-image: url("../images/img1.jpg");
   background-position: center;
   background-attachment: fixed;
