@@ -140,13 +140,13 @@ a {
         margin-top: 15em;
     }
     #welcome-section {
-        min-height: 700px;
+        min-height: 500px;
     }
     #about-section {
         min-height: 700px;
     }
     #contact-section {
-        min-height: 700px;
+        min-height: 900px;
     }
 }
 
