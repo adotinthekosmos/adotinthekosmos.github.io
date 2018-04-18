@@ -1,3 +1,7 @@
+/*
+This css this intentionally written for mobile first
+Created by: Khoa Phung
+*/
 @-webkit-keyframes ani-mouse {
   0% {
     opacity: 1;
@@ -118,12 +122,12 @@ html {
   position: relative;
   z-index: 0;
   width: 100%;
-  min-height: 768px; }
+  min-height: 600px; }
   #loader-section .loader-background {
     position: absolute;
     z-index: 1;
     width: 100%;
-    min-height: 768px;
+    min-height: 600px;
     background-color: #323a44;
     background-position: center;
     background-attachment: fixed;
@@ -189,7 +193,7 @@ html {
 
 #welcome-section {
   width: 100%;
-  min-height: 768px;
+  min-height: 900px;
   position: relative;
   z-index: 0;
   overflow: hidden; }
@@ -365,7 +369,7 @@ html {
 
 #about-section {
   width: 100%;
-  min-height: 890px;
+  min-height: 600px;
   padding-bottom: 20px; }
   #about-section .about-content {
     width: 100%;
@@ -528,7 +532,7 @@ html {
 /* Fonts */
 #timeline {
   width: 100%;
-  min-height: 983px;
+  min-height: 800px;
   background: #323a44;
   padding-top: 100px; }
   #timeline h1 {
@@ -685,10 +689,6 @@ html {
   .imglist img:hover {
     filter: blur(10px); }
 
-@media screen and (min-device-width: 320px) and (max-device-width: 480px) {
-  .imglist img {
-    width: 100%;
-    min-height: auto !important; } }
 #extraGreeting {
   width: 100%;
   min-height: 600px;
@@ -718,11 +718,11 @@ html {
       text-align: center; } }
 #contact-section {
   width: 100%;
-  min-height: 983px;
+  min-height: 600px;
   background: #323a44; }
   #contact-section .form-wrapper {
-    padding: 4em;
-    padding-top: 10em; }
+    padding: 3em;
+    padding-bottom: 5em; }
     #contact-section .form-wrapper .contact-title h1 {
       font-size: 3.5em;
       font-weight: 100;
@@ -791,7 +791,8 @@ html {
 
 #map {
   width: 100%;
-  min-height: 983px;
+  min-height: 700px;
+  height: 100%;
   background-color: #323a44; }
 
 .footer {
