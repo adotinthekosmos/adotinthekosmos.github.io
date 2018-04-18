@@ -194,7 +194,7 @@ jQuery(document).ready(function($) {
 
 //show loader when the video is loading
 function loadDelay() {
-    var timeOutController = setTimeout(showPage, 2000);
+    var timeOutController = setTimeout(showPage, 500);
 }
 
 //show the page when timeout is up
