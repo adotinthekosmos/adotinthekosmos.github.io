@@ -124,12 +124,11 @@ html {
     z-index: 1;
     width: 100%;
     min-height: 768px;
-    background: url("../images/loader-img.jpg");
+    background-color: #323a44;
     background-position: center;
     background-attachment: fixed;
     background-size: cover;
-    background-repeat: no-repeat;
-    filter: blur(10px); }
+    background-repeat: no-repeat; }
   #loader-section .loader {
     position: absolute;
     z-index: 2;
