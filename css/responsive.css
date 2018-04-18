@@ -142,6 +142,9 @@ a {
     #welcome-section {
         min-height: 500px;
     }
+    #welcome-section #video {
+        min-height: 500px;
+    }
     #about-section {
         min-height: 700px;
     }
