@@ -134,10 +134,19 @@ a {
     }
 }
 
-@media only screen and (min-width: 1900px) {
+@media only screen and (min-width: 1800px) {
     .cd-intro {
         margin: auto;
         margin-top: 15em;
+    }
+    #welcome-section {
+        min-height: 700px;
+    }
+    #about-section {
+        min-height: 700px;
+    }
+    #contact-section {
+        min-height: 700px;
     }
 }
 
