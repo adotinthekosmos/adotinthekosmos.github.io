@@ -23,9 +23,7 @@ html {
 
 body {
     font-size: 1.6rem;
-    font-family: "Source Sans Pro", sans-serif;
     color: #fff;
-    background-color: #0d0d0d;
 }
 
 a {
@@ -69,9 +67,25 @@ a {
     margin: 9em auto;
 }
 
+@media only screen and (min-width: 480px) {
+    #extraGreeting h1 {
+        font-size: 4em;
+        font-weight: 100;
+        text-align: center;
+    }
+}
+
 @media only screen and (min-width: 768px) {
     .cd-intro {
         margin: 5em auto;
+    }
+    #extraGreeting {
+        padding: 5em;
+    }
+    #extraGreeting h1 {
+        font-size: 4em;
+        font-weight: 100;
+        text-align: center;
     }
 }
 
@@ -82,6 +96,21 @@ a {
     }
     .scroll-btn {
         bottom: 20%;
+    }
+    #extraGreeting {
+        width: 100%;
+        min-height: 600px;
+        background-image: url("../images/img2.jpg");
+        background-position: center;
+        background-attachment: fixed;
+        background-size: cover;
+        background-repeat: no-repeat;
+        padding: 10em;
+    }
+    #extraGreeting h1 {
+        font-size: 3.5em;
+        font-weight: 100;
+        text-align: center;
     }
 }
 
