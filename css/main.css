@@ -366,8 +366,8 @@ html {
 #about-section {
   width: 100%;
   min-height: 600px;
-  padding-top: 50px;
-  padding-bottom: 50px; }
+  padding-top: 80px;
+  padding-bottom: 80px; }
   #about-section .about-content {
     width: 100%;
     height: 100%;
@@ -482,7 +482,7 @@ html {
 
 #bigAssImg1 {
   width: 100%;
-  min-height: 600px !important;
+  min-height: 600px;
   background-image: url("../images/bigImg1.jpg");
   background-position: center;
   background-attachment: fixed;
@@ -492,7 +492,8 @@ html {
 #my-skill {
   width: 100%;
   min-height: 600px;
-  padding: 50px; }
+  padding-top: 150px;
+  padding-bottom: 50px; }
   #my-skill h1 {
     font-size: 6rem;
     text-align: center;
