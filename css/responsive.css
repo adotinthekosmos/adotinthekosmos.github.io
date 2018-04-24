@@ -151,6 +151,9 @@ a {
     #contact-section {
         min-height: 900px;
     }
+    #contact-section #map {
+        min-height: 900px;
+    }
 }
 
 .cd-headline {

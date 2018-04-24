@@ -1,3 +1,7 @@
+/*
+This css this intentionally written for mobile first
+Created by: Khoa Phung
+*/
 @-webkit-keyframes ani-mouse {
   0% {
     opacity: 1;
@@ -85,17 +89,69 @@
     -webkit-transform: rotate(360deg);
     -o-transform: rotate(360deg);
     transform: rotate(360deg); } }
+@keyframes leftToRight {
+  from {
+    left: -100px;
+    opacity: 0; }
+  to {
+    left: 0px;
+    opacity: 1; } }
+textarea:hover,
+input:hover,
+textarea:active,
+input:active,
+textarea:focus,
+input:focus,
+button:focus,
+button:active,
+button:hover,
+label:focus,
+.btn:active,
+.btn.active {
+  outline: 0px !important;
+  -webkit-appearance: none; }
+
 body,
 html {
   font-family: 'Raleway', sans-serif;
   overflow-x: hidden;
   background-color: #323a44;
-  color: white; }
+  color: white;
+  height: 100%;
+  width: 100%; }
 
 #loader-section {
+  position: relative;
+  z-index: 0;
   width: 100%;
-  min-height: 768px;
-  background: url("../images/loader-img.jpg"); }
+  min-height: 600px; }
+  #loader-section .loader-background {
+    position: absolute;
+    z-index: 1;
+    width: 100%;
+    min-height: 600px;
+    background-color: #323a44;
+    background-position: center;
+    background-attachment: fixed;
+    background-size: cover;
+    background-repeat: no-repeat; }
+  #loader-section .loader {
+    position: absolute;
+    z-index: 2;
+    top: 40%;
+    left: 50%;
+    margin-left: -75px;
+    width: 150px;
+    height: 150px;
+    border: 20px solid white;
+    border-top: 20px solid #323a44;
+    border-radius: 50%;
+    animation: rotating 2s linear infinite; }
+
+.left-to-right {
+  position: relative;
+  animation-name: leftToRight;
+  animation-duration: 1s; }
 
 .contact-btn {
   position: fixed;
@@ -123,15 +179,23 @@ html {
     color: white;
     padding: 10px 0px 10px 0px; }
   .contact-btn:hover {
-    background: #DA4453;
-    transition: all 0.3s ease;
+    background: -webkit-linear-gradient(to left, #89216B, #DA4453);
+    /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to left, #89216B, #DA4453);
+    /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    -webkit-transition: background-color 1000ms linear;
+    -ms-transition: background-color 1000ms linear;
+    transition: background-color 1000ms linear;
     cursor: pointer; }
   .contact-btn:focus {
     outline: none; }
+  .contact-btn i {
+    visibility: visible !important;
+    animation: wobble 1s infinite !important; }
 
 #welcome-section {
   width: 100%;
-  min-height: 768px;
+  min-height: 900px;
   position: relative;
   z-index: 0;
   overflow: hidden; }
@@ -160,10 +224,10 @@ html {
     #welcome-section #welcome-content .portfolio-btn-wrapper {
       display: flex;
       align-items: center;
-      justify-content: center;
-      margin-bottom: 10em; }
+      justify-content: center; }
     #welcome-section #welcome-content .my-portfolio-btn {
       margin: auto;
+      margin-bottom: 2%;
       background: transparent;
       padding: 0;
       width: 100px;
@@ -205,15 +269,17 @@ html {
         -moz-transition: -moz-transform .7s;
         -ms-transition: -ms-transform .7s;
         -o-transition: -o-transform .7s;
-        transition: transform .7s;
+        transition: all .7s;
         -webkit-transform: rotate(45deg);
         -moz-transform: rotate(45deg);
         -ms-transform: rotate(45deg);
         -o-transform: rotate(45deg);
         transform: rotate(45deg);
         text-align: center;
-        width: 4em; }
+        width: 4em;
+        box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23); }
         #welcome-section .social-wrap .social li:hover {
+          box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
           -webkit-transform: scale(1.3, 1.3) rotate(45deg);
           -moz-transform: scale(1.3, 1.3) rotate(45deg);
           -ms-transform: scale(1.3, 1.3) rotate(45deg);
@@ -238,27 +304,27 @@ html {
         left: 0;
         top: 0%; }
       #welcome-section .social-wrap .social .github {
-        background: #1a9ec4;
+        background: #333;
         bottom: 0;
         left: 25%; }
       #welcome-section .social-wrap .social .medium {
-        background: #d05f8f;
+        background: #17b475;
         left: 50%;
         top: 0%; }
       #welcome-section .social-wrap .social .google-plus {
-        background: #3f7aa3;
+        background: #d34836;
         bottom: 0;
         left: 75%; }
       #welcome-section .social-wrap .social .linked-in {
-        background: #157f9d;
+        background: #4875B4;
         left: 100%;
         top: 0%; }
   #welcome-section .scroll-btn {
-    display: flex;
-    text-align: center;
-    align-items: center;
-    justify-content: center;
-    margin-top: 50px; }
+    position: absolute;
+    bottom: 10%;
+    left: 50%;
+    margin-left: -17px;
+    margin-bottom: -27px; }
     #welcome-section .scroll-btn > * {
       display: inline-block;
       line-height: 18px;
@@ -305,7 +371,7 @@ html {
 
 #about-section {
   width: 100%;
-  min-height: 890px;
+  min-height: 600px;
   padding-bottom: 20px; }
   #about-section .about-content {
     width: 100%;
@@ -429,7 +495,8 @@ html {
   background-image: url("../images/img1.jpg");
   background-position: center;
   background-attachment: fixed;
-  background-size: cover; }
+  background-size: cover;
+  background-repeat: no-repeat; }
 
 /* Media Queries */
 /* Card sizing */
@@ -467,7 +534,7 @@ html {
 /* Fonts */
 #timeline {
   width: 100%;
-  min-height: 983px;
+  min-height: 800px;
   background: #323a44;
   padding-top: 100px; }
   #timeline h1 {
@@ -609,31 +676,32 @@ html {
   #portfolio-section .col-md-4 {
     margin-bottom: 20px; }
 
+.img-fluid {
+  max-width: 100%;
+  height: auto; }
+
 .hidden {
   display: none; }
 
 .imglist img {
-  width: 100%;
-  min-height: 425px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
+  border-radius: 5px;
   overflow: hidden;
   transition: all 0.2s ease; }
   .imglist img:hover {
-    filter: blur(5px); }
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24); }
 
-@media screen and (min-device-width: 320px) and (max-device-width: 480px) {
-  .imglist img {
-    width: 100%;
-    min-height: auto !important; } }
 #extraGreeting {
   width: 100%;
   min-height: 600px;
   background-image: url("../images/img2.jpg");
-  background-position: initial;
+  background-position: center;
   background-attachment: fixed;
   background-size: cover;
-  padding: 10em; }
+  background-repeat: no-repeat;
+  padding: 2em; }
   #extraGreeting h1 {
-    font-size: 3.5em;
+    font-size: 1.5em;
     font-weight: 100;
     text-align: center; }
 
@@ -652,11 +720,11 @@ html {
       text-align: center; } }
 #contact-section {
   width: 100%;
-  min-height: 983px;
+  min-height: 600px;
   background: #323a44; }
   #contact-section .form-wrapper {
-    padding: 4em;
-    padding-top: 10em; }
+    padding: 3em;
+    padding-bottom: 5em; }
     #contact-section .form-wrapper .contact-title h1 {
       font-size: 3.5em;
       font-weight: 100;
@@ -684,14 +752,16 @@ html {
         padding: 15px 20px 15px 20px;
         margin-top: 1.2em;
         font-size: 1em;
-        transition: all 0.3s ease; }
+        transition: all 0.3s ease;
+        border-radius: 5px; }
         #contact-section .form-wrapper .contact-form input::placeholder,
         #contact-section .form-wrapper .contact-form textarea::placeholder {
           color: #939da5; }
         #contact-section .form-wrapper .contact-form input:focus,
         #contact-section .form-wrapper .contact-form textarea:focus {
-          outline: none !important;
-          color: white; }
+          color: white;
+          background-color: #2a3039;
+          box-shadow: 0 10px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22); }
         #contact-section .form-wrapper .contact-form input:hover,
         #contact-section .form-wrapper .contact-form textarea:hover {
           background-color: #2a3039; }
@@ -703,7 +773,11 @@ html {
       margin-top: 2em;
       width: 150px;
       height: 50px;
-      border-radius: 25px; }
+      border-radius: 25px;
+      box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+      transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1); }
+      #contact-section .form-wrapper button:hover {
+        box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22); }
       #contact-section .form-wrapper button a {
         display: block;
         color: white;
@@ -719,12 +793,14 @@ html {
 
 #map {
   width: 100%;
-  min-height: 983px;
+  min-height: 700px;
+  height: 100%;
   background-color: #323a44; }
 
 .footer {
   position: absolute;
   bottom: 0.6em;
+  padding-right: 50px;
   font-family: "Open Sans", "Helvetica Neue", "Lucida Grande", Arial, Verdana, sans-serif; }
   .footer a {
     color: white;
