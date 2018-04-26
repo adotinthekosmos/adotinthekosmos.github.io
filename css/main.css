@@ -447,7 +447,8 @@ html {
       text-align: center;
       line-height: 60px;
       transition: all 0.3s;
-      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23); }
+      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
+      transform: skew(-10deg); }
       #about-section .about-content .dl-cv-btn:hover {
         text-decoration: none; }
         #about-section .about-content .dl-cv-btn:hover span {
