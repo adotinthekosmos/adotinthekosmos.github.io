@@ -339,7 +339,7 @@ html {
             font-weight: 100;
         }
         .about-subtitle {
-            font-size: 1.6rem;
+            font-size: 1.7rem;
             line-height: 1.8;
             padding: 40px 80px 0 80px;
             color: #94a1aa;
@@ -412,20 +412,27 @@ html {
             bottom: 0;
         }
         .dl-cv-btn {
+            transform-style: preserve-3d;
             display: block;
             position: absolute;
             bottom: 0;
             color: #fff;
-            width: 120px;
+            width: 150px;
             height: 60px;
             background: #d34837;
             text-align: center;
             line-height: 60px;
-            transform: skewX(-10deg);
             transition: all 0.3s;
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
             &:hover {
                 text-decoration: none;
-                box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
+                span {
+                    text-shadow: 0px 4px 3px rgba(0, 0, 0, 0.4), 0px 8px 13px rgba(0, 0, 0, 0.1), 0px 18px 23px rgba(0, 0, 0, 0.1);
+                }
+            }
+            span {
+                display: block;
+                transform: translateZ(20px)
             }
         }
         .about-social {
@@ -1095,6 +1102,30 @@ $counter: $items - $rows+2;
             color: #00c8aa;
         }
     }
+}
+
+.rainbow {
+    background: #70e1f5;
+    /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #ffd194, #70e1f5);
+    /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #ffd194, #70e1f5);
+    /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    color: transparent;
+    -webkit-background-clip: text;
+    background-clip: text;
+}
+
+.rainbow2 {
+    background: #70e1f5;
+    /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #ffd194, #70e1f5);
+    /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #ffd194, #70e1f5);
+    /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    color: transparent;
+    -webkit-background-clip: text;
+    background-clip: text;
 }
 
 //end contact section
