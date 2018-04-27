@@ -13,3 +13,11 @@ This project is licensed under the MIT License.
 ## Author
 
 * **Khoa Phung** - *Initial work* - [Khoateamer](https://github.com/khoateamer)
+
+## Built With
+
+* jQuery
+* SASS
+* Bootstrap
+* FontAwesome
+* GoogleFonts
