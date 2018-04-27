@@ -791,7 +791,7 @@ html {
     font-weight: 200;
     margin-bottom: 50px; }
   #portfolio-section .row {
-    overflow-y: hidden; }
+    padding-bottom: 10px; }
   #portfolio-section .col-md-4 {
     margin-top: 20px; }
 
