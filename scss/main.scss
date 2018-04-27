@@ -22,7 +22,7 @@ label:focus,
 
 body,
 html {
-    font-family: 'Raleway', sans-serif;
+    font-family: 'rawline', sans-serif;
     overflow-x: hidden;
     background-color: #323a44;
     color: white;
@@ -895,7 +895,7 @@ $counter: $items - $rows+2;
                 height: $body-height;
             }
             p {
-                font-size: 14px;
+                font-size: 15px;
                 line-height: 18px;
                 margin-bottom: $inner-margin;
             }
