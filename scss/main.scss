@@ -25,8 +25,7 @@ html {
     font-family: 'rawline', sans-serif;
     overflow-x: hidden;
     background-color: #323a44;
-    color: white;
-    // height: 100%;
+    color: white; // height: 100%;
     // width: 100%;
 }
 
@@ -181,8 +180,7 @@ html {
         b {
             font-family: 'Fredericka the Great', cursive;
         }
-    }
-    //start social btn
+    } //start social btn
     .social-wrap {
         min-height: 150px;
         margin-top: 6em;
@@ -260,8 +258,7 @@ html {
                 top: 0%;
             }
         }
-    }
-    //end social btn
+    } //end social btn
     //start mouse scroll indicator
     .scroll-btn {
         position: absolute;
@@ -280,13 +277,13 @@ html {
             letter-spacing: 2px;
         }
         &>*:hover,
-         :focus,
+        :focus,
         .active {
             color: #ffffff;
         }
         &>*:hover,
-         :focus,
-         :active,
+        :focus,
+        :active,
         .active {
             opacity: 0.8;
             filter: alpha(opacity=80);
@@ -317,8 +314,7 @@ html {
                 animation: ani-mouse 2s linear infinite;
             }
         }
-    }
-    //end mouse scroll indicator
+    } //end mouse scroll indicator
 }
 
 //end welcome section
@@ -519,8 +515,7 @@ html {
     .progress-title {
         text-align: center;
         margin-bottom: 20px;
-    }
-    //start .progress
+    } //start .progress
     .progress {
         width: 150px;
         height: 150px;
@@ -590,8 +585,7 @@ html {
             top: 7.5%;
             left: 7.5%;
         }
-    }
-    //end .progress
+    } //end .progress
     //jQuery animation
     .right-progress-animated {
         animation: loading-1 1.5s linear forwards;
@@ -607,8 +601,7 @@ html {
     }
     .javascript-animated {
         animation: loading-5 1.5s linear forwards 1.5s;
-    }
-    //pie color
+    } //pie color
     .progress.green .progress-bar {
         border-color: #1abc9c;
     }
@@ -650,7 +643,6 @@ html {
 
 //end bigAssImg section
 //start timeline section
-
 /* Media Queries */
 
 @mixin mq-xs {
@@ -686,9 +678,8 @@ $border: 1px solid rgba(191,
 191,
 191,
 0.4);
-$items: 2;
+$items: 3;
 $rows: ceil($items/2);
-
 /* Card sizing */
 
 $card-height: 400px;
@@ -698,7 +689,6 @@ $number-size: 35px;
 $stagger: 180px;
 $outer-margin: 90px;
 $marker-size: 9px;
-
 /* Colors */
 
 $steps: #46b8e9;
@@ -707,7 +697,6 @@ $colors: #ef5350,
 #c0ca33,
 #26a69a;
 $timeline: #bdbdbd;
-
 /* Calculations */
 
 $container-height: $rows * ($card-height+$outer-margin)+$stagger;
@@ -715,7 +704,6 @@ $container-width: $card-width*2+$outer-margin*3;
 $head-height: $number-size+50;
 $body-height: $card-height - $head-height;
 $marker-dist: $card-width+$outer-margin/2 - $marker-size/2;
-
 /* Placeholders */
 
 @include mq-lg {
@@ -738,7 +726,6 @@ $marker-dist: $card-width+$outer-margin/2 - $marker-size/2;
     }
 }
 
-
 /* Some Cool Stuff */
 
 $counter: $items - $rows+2;
@@ -752,13 +739,11 @@ $counter: $items - $rows+2;
     $counter: $counter+1;
 }
 
-
 /* Border Box */
 
 * {
     box-sizing: border-box;
 }
-
 
 /* Fonts */
 

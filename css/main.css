@@ -646,6 +646,12 @@ html {
 .demo-card:nth-child(2) {
   order: 3; }
 
+.demo-card:nth-child(3) {
+  order: 2; }
+
+.demo-card:nth-child(4) {
+  order: 4; }
+
 /* Border Box */
 * {
   box-sizing: border-box; }
@@ -674,7 +680,7 @@ html {
         display: flex;
         flex-flow: column wrap;
         width: 1170px;
-        height: 670px;
+        height: 1160px;
         margin: 0 auto; } }
     #timeline .demo-card-wrapper::after {
       z-index: 1;
@@ -779,6 +785,10 @@ html {
       background-color: #ab47bc; }
       #timeline .demo-card--step2 .head::after {
         border-color: #ab47bc; }
+    #timeline .demo-card--step3 {
+      background-color: #c0ca33; }
+      #timeline .demo-card--step3 .head::after {
+        border-color: #c0ca33; }
 
 #portfolio-section {
   width: 100%;
