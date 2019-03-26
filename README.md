@@ -4,7 +4,7 @@ This is my professional CV.
 
 ## Getting Started
 
-To view this project, you can access via this [URL](https://khoateamer.github.io/) or download/clone this project via [GitHub](https://github.com/khoateamer/khoateamer.github.io)
+To view this project, you can access via this [URL](https://adotinthekosmos.github.io/) or download/clone this project via [GitHub](https://github.com/khoateamer/khoateamer.github.io)
 
 ## License
 
@@ -12,7 +12,7 @@ This project is licensed under the MIT License.
 
 ## Author
 
-* **Khoa Phung** - *Initial work* - [Khoateamer](https://github.com/khoateamer)
+* **Khoa Phung** - *Initial work* - [adotinthekosmos](https://github.com/adotinthekosmos)
 
 ## Built With
 
